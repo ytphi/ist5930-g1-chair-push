@@ -7,12 +7,12 @@ same code on the real robot.
 
 ## Watch first: how a G1 learns to push a chair (16 min, narrated)
 
-[![How a G1 learns to push a chair — narrated video](media/video_thumbnail.jpg)](https://github.com/ytphi/ist5930-g1-chair-push/releases/download/videos-2026-11-18/g1_training_explained.mp4)
+[![How a G1 learns to push a chair — narrated video](media/video_thumbnail.jpg)](https://youtu.be/PHi8myQs8H8)
 
-**[▶ Download / watch `g1_training_explained.mp4`](https://github.com/ytphi/ist5930-g1-chair-push/releases/download/videos-2026-11-18/g1_training_explained.mp4)** (120 MB)
-- **Part 1, 0:00–5:53: G1 training from zero.** Why we train in simulation, the control loop, what the robot sees,
+**[▶ Watch on YouTube](https://youtu.be/PHi8myQs8H8)** · [download the mp4](https://github.com/ytphi/ist5930-g1-chair-push/releases/download/videos-2026-11-18/g1_training_explained.mp4) (120 MB)
+- **[Part 1, 0:00–5:53](https://youtu.be/PHi8myQs8H8): G1 training from zero.** Why we train in simulation, the control loop, what the robot sees,
   the reward score, PPO, one training run seen at six moments, the curriculum, the planner, and how a policy gets to the real robot.
-- **Part 2, 5:53–15:53: ten training runs, v1 → v10.** Every reward loophole the robot found (four of them), and the fix for each.
+- **[Part 2, 5:53–15:53](https://youtu.be/PHi8myQs8H8?t=353): ten training runs, v1 → v10.** Every reward loophole the robot found (four of them), and the fix for each.
 
 Short clips: [512 robots](media/v10_512_robots.mp4) · [palm close-up, v10](media/v10_side_grip_closeup.mp4) ·
 [all videos](https://github.com/ytphi/ist5930-g1-chair-push/releases/tag/videos-2026-11-18)
