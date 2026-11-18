@@ -1,0 +1,7 @@
+# Laptop side: sim2sim and running the policy on the real G1.
+# The real robot also needs unitree_sdk2_python (see README); use Python 3.10 for it.
+mujoco>=3.2
+onnxruntime>=1.17
+numpy
+pyyaml
+mediapy   # only for --video

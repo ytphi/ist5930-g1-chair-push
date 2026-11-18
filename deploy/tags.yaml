@@ -1,0 +1,32 @@
+# AprilTag layout for the CGI-112 chair-push demo (family tag36h11).
+#
+# Table frame: origin = center of the table footprint on the floor, +x = into the table
+# (away from the side the chair comes from), +y = left when facing the table, z up.
+# The front edge (where the backrest stops) is at x = -0.26. The policy only knows that edge, so
+# on the real table put the origin 0.26 m behind the front-edge midpoint whatever the real depth
+# (CGI-112 table measured 2026-11-16: 60 x 20 in = 1.524 x 0.508 m).
+# Chair frame: origin = center post on the floor, +x = seat front, z up.
+
+tag_size: 0.149         # measured 2026-11-16: 5 7/8 in = 149.2 mm
+
+camera:
+  # D435 pose relative to torso_link [x, y, z, roll, pitch, yaw] (m, rad), from Unitree's G1
+  # URDF (d435_joint). VERIFY on the robot with `g1_chair_deploy.py --calib-check`.
+  torso_to_camera: [0.0576, 0.0175, 0.4299, 0.0, 0.8308, 0.0]
+  hfov_deg: 69.0          # D435 color stream
+  vfov_deg: 42.0
+  max_range: 3.5
+
+# Flat on the floor, printed face up, top edge of the print pointing at the table (+x).
+# Value = [x, y] of the tag center in the table frame. Tape them down; measure carefully.
+floor_tags:            # measured 2026-11-16 (inches from the front-edge midpoint on the floor and from
+  10: [-1.510,  0.958]  #  10 = 62 in from the midpoint; lateral fitted from 11-10 = 78 in (tape said 6 in outside the left edge)
+  11: [-1.558, -1.021]  #  11 = 65 in from the midpoint; lateral fitted from 11-10 = 78 in (tape said 8.5 in outside the right edge)
+  12: [-2.076, -0.030]  #  12 = 71.5 in, 31.2 in from the left edge line
+  13: [-2.922,  0.762]  #  13 = 109 in, on the left edge line
+  14: [-2.889, -0.578]  #  14 = 106 in, 7.25 in INSIDE the right edge line (then 14-12 = 40.0 in = tape = camera)
+
+# On the back face of the backrest, printed face toward the robot (-x of the chair),
+# top edge up. Value = [x, y, z] of the tag center in the chair frame.
+chair_tags:
+  0: [-0.272, 0.0, 0.648]   # height measured 2026-11-16: 25.5 in; x and y still the design values
