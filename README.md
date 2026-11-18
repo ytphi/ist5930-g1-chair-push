@@ -5,7 +5,14 @@ both hands, and push the chair under a table (success = the backrest touches the
 Everything here runs on a laptop CPU. You can test it in MuJoCo (sim2sim) first, then run the
 same code on the real robot.
 
+![512 G1 robots pushing chairs in mjlab, policy v10](media/v10_512_robots.gif)
+
+*512 robots in mjlab at the hardest layout level, all driven by `chair-push-v10.onnx`.*
+Full clip: [`media/v10_512_robots.mp4`](media/v10_512_robots.mp4) · palm close-up: [`media/v10_side_grip_closeup.mp4`](media/v10_side_grip_closeup.mp4) ·
+narrated training story, v1 → v10 (9 min): [**Ten runs** (release download)](https://github.com/ytphi/ist5930-g1-chair-push/releases/tag/videos-2026-11-18)
+
 ```
+media/      videos (mjlab, 512 robots; hand close-up)
 policies/   trained ONNX policies (the joint order, gains and observation layout are stored in each file)
 deploy/     deploy code, AprilTag perception, tag layouts, MuJoCo scene (see deploy/README.md)
 ```
@@ -64,7 +71,11 @@ The short version:
 - Always have a spotter and a gantry or safety rope. Leave 5–10 cm of slack in the rope, because a tight rope
   pulls the robot and makes it shuffle and spin.
 
+## License
+
+The code and policies are released under the [MIT License](LICENSE). The G1 meshes keep their original license (see below).
+
 ## Credits
 
 The G1 meshes in `deploy/assets/chair_scene/assets/` come from Unitree's G1 model as packaged in
-[mjlab](https://github.com/mujocolab/mjlab). The policies were trained with mjlab 1.6.0 (PPO, 4096 environments).
+[mjlab](https://github.com/mujocolab/mjlab) and stay under their original license. The policies were trained with mjlab 1.6.0 (PPO, 4096 environments).
